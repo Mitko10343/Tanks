@@ -36,7 +36,7 @@ public class BasicMovement : MonoBehaviour {
             else
             {
                 thrust += 0.3f;
-                rb.AddRelativeForce(0, 0, -thrust, ForceMode.Acceleration);
+                rb.AddRelativeForce(0, 0, -thrust, ForceMode.Force);
             }
         }
         else if ( (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))  && thrust > 0)
@@ -55,7 +55,7 @@ public class BasicMovement : MonoBehaviour {
             if (thrust < 0)
             {
                 thrust -= 0.2f;
-                rb.AddForce(0, 0, -thrust, ForceMode.Acceleration);
+                rb.AddForce(0, 0, -thrust, ForceMode.Force);
             }
 
         }
@@ -64,10 +64,10 @@ public class BasicMovement : MonoBehaviour {
 
     public void Steer()
     {
-        if (Input.GetKey(KeyCode.A) && torque <= 10)
+        /*if (Input.GetKey(KeyCode.A) && torque >= -10)
         {
-            torque += 0.1f;
-            rb.AddTorque(0, -torque, 0);
+            torque -= 0.1f;
+            rb.AddTorque(0, torque, 0);
 
         }
         
@@ -79,7 +79,7 @@ public class BasicMovement : MonoBehaviour {
             //turn = Input.GetAxis("Horizontal");
             //rb.AddRelativeTorque(0, torque, 0);
         }
-        
+        */
     }
 }
 
