@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour {
 
-    public float currentSpeed;
-    public float maxSpeed;
 
-    public float downForce;
     public float thrust = 0;
     public Rigidbody rb;
 
     public float torque;
     float turn;
-
-
-    public float turnAngle;
-    public float MaxturnAngle;
-    public float brakeForce;
-
+    int gear = 0; // value for gear. If gear = 0 then the vehicle is on neutral, if gear =-1 the vehicle is reversing and if gear=1 the vehicle is moving forward
+    
 
     void Start()
     {
@@ -26,7 +19,7 @@ public class BasicMovement : MonoBehaviour {
     }
 
  
-    void Update()
+    void FixedUpdate()
     {
         Acc();
         Steer();
@@ -34,36 +27,36 @@ public class BasicMovement : MonoBehaviour {
 
     public void Acc()
     {
-        //rb.AddForce(0, -downForce, 0, ForceMode.Acceleration);
-
-        if (Input.GetKey(KeyCode.W) && thrust <= 15000)
+        if (Input.GetKey(KeyCode.W) && thrust <= 150)
         {
-            thrust += 13f;
-            rb.AddForce(0, 0, -thrust, ForceMode.Force);
-        }
-        else if (!Input.GetKey(KeyCode.W) && thrust != 0)
-        {
-            thrust -= 0.2f;
-        }
-
-        /*else if (!Input.GetKey(KeyCode.S))
-        {
-            if (currentSpeed > 10)
+            if (thrust < 0)
             {
-                currentSpeed = currentSpeed - brakeForce;
-                transform.Translate(0, 0, -currentSpeed * Time.deltaTime);
+                thrust += 10f;
             }
             else
             {
-                currentSpeed = 0;
-                transform.Translate(0, 0, -currentSpeed * Time.deltaTime);
+                thrust += 0.3f;
+                rb.AddRelativeForce(0, 0, -thrust, ForceMode.Acceleration);
             }
-        }*/
-
-        if(Input.GetKey(KeyCode.S) && thrust <= 7000)
+        }
+        else if ( (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))  && thrust > 0)
         {
-            thrust += 13f;
-            rb.AddForce(0, 0, thrust, ForceMode.Force);
+           thrust -= 0.2f;
+        }
+
+
+        if(Input.GetKey(KeyCode.S) && thrust >= -70)
+        {
+            if (thrust > 0)
+            {
+                thrust -= 10f;
+            }
+
+            if (thrust < 0)
+            {
+                thrust -= 0.2f;
+                rb.AddForce(0, 0, -thrust, ForceMode.Acceleration);
+            }
 
         }
     }
@@ -71,36 +64,20 @@ public class BasicMovement : MonoBehaviour {
 
     public void Steer()
     {
-        if (Input.GetKey(KeyCode.A) && torque <= 150)
+        if (Input.GetKey(KeyCode.A) && torque <= 10)
         {
-            torque += 0.4f;
-            turn = Input.GetAxis("Horizontal");
-            rb.AddTorque(transform.up * torque * turn);
+            torque += 0.1f;
+            rb.AddTorque(0, -torque, 0);
+
         }
         
 
-        if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.D) && torque <=10)
         {
-            if (currentSpeed < 100)
-            {
-                MaxturnAngle = 25;
-
-                if (turnAngle < MaxturnAngle)
-                {
-                    turnAngle++;
-                }
-                transform.Rotate(0, turnAngle * Time.deltaTime, 0);
-            }
-            else
-            {
-                turnAngle = turnAngle-10;
-                MaxturnAngle = 20;
-                if (turnAngle < MaxturnAngle)
-                {
-                    turnAngle++;
-                }
-                transform.Rotate(0, turnAngle * Time.deltaTime, 0);
-            }
+            torque += 0.1f;
+            rb.transform.Rotate(0, torque, 0);
+            //turn = Input.GetAxis("Horizontal");
+            //rb.AddRelativeTorque(0, torque, 0);
         }
         
     }
