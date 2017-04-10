@@ -7,11 +7,20 @@ public class BasicMovement : MonoBehaviour {
     public int maxSpeed;
     public float currentSpeed;
 
+    public float thrust = 0;
+    public Rigidbody rb;
+
     public float turnAngle;
     public float MaxturnAngle;
     public float brakeForce;
 
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+ 
     void Update()
     {
         Acc();
@@ -20,20 +29,13 @@ public class BasicMovement : MonoBehaviour {
 
     public void Acc()
     {
-
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && thrust <= 150)
         {
-            currentSpeed += 0.5f;
-            if (currentSpeed < maxSpeed)
-            {
-                transform.Translate(0, 0, -currentSpeed * Time.deltaTime);
-            }
-            else
-            {
-                currentSpeed--;
-            }
+            thrust += 0.1f;
+            rb.AddForce(0, 0, -thrust, ForceMode.Acceleration);
+
         }
-        else if (!Input.GetKey(KeyCode.S))
+        /*else if (!Input.GetKey(KeyCode.S))
         {
             if (currentSpeed > 10)
             {
@@ -45,21 +47,13 @@ public class BasicMovement : MonoBehaviour {
                 currentSpeed = 0;
                 transform.Translate(0, 0, -currentSpeed * Time.deltaTime);
             }
-        }
+        }*/
 
-        if(Input.GetKey(KeyCode.S))
+        if(Input.GetKey(KeyCode.S) && thrust <= 70)
         {
-            currentSpeed = currentSpeed -0.5f;
+            thrust += 0.1f;
+            rb.AddForce(0, 0, thrust, ForceMode.Acceleration);
 
-            if (currentSpeed > -75)
-            {
-                transform.Translate(0, 0, -currentSpeed * Time.deltaTime);
-            }
-            else
-            {
-                transform.Translate(0, 0, -75 * Time.deltaTime);
-            }
-  
         }
     }
 
