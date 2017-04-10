@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour {
 
-    public int maxSpeed;
     public float currentSpeed;
+    public float maxSpeed;
 
+    public float downForce;
     public float thrust = 0;
     public Rigidbody rb;
+
+    public float torque;
+    float turn;
+
 
     public float turnAngle;
     public float MaxturnAngle;
@@ -29,12 +34,18 @@ public class BasicMovement : MonoBehaviour {
 
     public void Acc()
     {
-        if (Input.GetKey(KeyCode.W) && thrust <= 150)
-        {
-            thrust += 0.1f;
-            rb.AddForce(0, 0, -thrust, ForceMode.Acceleration);
+        //rb.AddForce(0, -downForce, 0, ForceMode.Acceleration);
 
+        if (Input.GetKey(KeyCode.W) && thrust <= 15000)
+        {
+            thrust += 13f;
+            rb.AddForce(0, 0, -thrust, ForceMode.Force);
         }
+        else if (!Input.GetKey(KeyCode.W) && thrust != 0)
+        {
+            thrust -= 0.2f;
+        }
+
         /*else if (!Input.GetKey(KeyCode.S))
         {
             if (currentSpeed > 10)
@@ -49,10 +60,10 @@ public class BasicMovement : MonoBehaviour {
             }
         }*/
 
-        if(Input.GetKey(KeyCode.S) && thrust <= 70)
+        if(Input.GetKey(KeyCode.S) && thrust <= 7000)
         {
-            thrust += 0.1f;
-            rb.AddForce(0, 0, thrust, ForceMode.Acceleration);
+            thrust += 13f;
+            rb.AddForce(0, 0, thrust, ForceMode.Force);
 
         }
     }
@@ -60,27 +71,11 @@ public class BasicMovement : MonoBehaviour {
 
     public void Steer()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && torque <= 150)
         {
-            if (currentSpeed < 100)
-            {
-                MaxturnAngle = 35;
-                if (turnAngle < MaxturnAngle)
-                {
-                    turnAngle++;
-                }
-                transform.Rotate(0, -turnAngle * Time.deltaTime, 0);
-            }
-            else
-            {
-                turnAngle = turnAngle - 10;
-                MaxturnAngle = 30;
-                if (turnAngle < MaxturnAngle)
-                {
-                    turnAngle++;
-                }
-                transform.Rotate(0, -turnAngle * Time.deltaTime, 0);
-            }
+            torque += 0.4f;
+            turn = Input.GetAxis("Horizontal");
+            rb.AddTorque(transform.up * torque * turn);
         }
         
 
