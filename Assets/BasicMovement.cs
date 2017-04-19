@@ -7,6 +7,7 @@ public class BasicMovement : MonoBehaviour {
     public int PlayerNum = 1;
     public float Speed = 12f;
     public float turnSpeed = 180f;
+    public float maxSpeed = 33f;
 
     private string MovementAxisName;
     private string TurnAxisName;
@@ -14,10 +15,12 @@ public class BasicMovement : MonoBehaviour {
     private float MovementInputValue;
     private float TurnInputValue;
 
-
+    public Vector3 CenterOfMass;
+ 
     private void Awake()
     {
         tank = GetComponent<Rigidbody>();
+        tank.centerOfMass = CenterOfMass;
     }
 
     private void OnEnable()
@@ -56,9 +59,21 @@ public class BasicMovement : MonoBehaviour {
     private void Move()
     {
         // Adjust the position of the tank based on the player's input
-        Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
-
-        tank.MovePosition(tank.position + movement);
+        if (Speed <= maxSpeed)
+        {
+            Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
+            tank.MovePosition(tank.position + movement);
+            Speed += 0.1f;
+        }
+        if (MovementInputValue == 0)
+        {
+            Speed = 12f;
+        }
+        if(Speed >= maxSpeed)
+        {
+            Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
+            tank.MovePosition(tank.position + movement);
+        }
     }
 
     private void Turn()
