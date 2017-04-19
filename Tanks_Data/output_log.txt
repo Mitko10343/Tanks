@@ -19,24 +19,19 @@ Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networ
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.028 seconds
+- Completed reload, in  0.031 seconds
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.601872 ms
+UnloadTime: 1.762793 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 23b8 -> priority: 1 
+  Thread -> id: 29c0 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.849238 ms
+UnloadTime: 5.048648 ms
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 563.
-Total: 0.574401 ms (FindLiveObjects: 0.054617 ms CreateObjectMapping: 0.040688 ms MarkObjects: 0.195743 ms  DeleteObjects: 0.274554 ms)
-
-Non-convex MeshCollider with non-kinematic Rigidbody is no longer supported in Unity 5.
-If you want to use a non-convex mesh either make the Rigidbody kinematic or remove the Rigidbody component. Scene hierarchy path "Map/Bridge", Mesh asset path "" Mesh name "base"
- 
-(Filename:  Line: 0)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 593.
+Total: 0.778576 ms (FindLiveObjects: 0.054251 ms CreateObjectMapping: 0.036289 ms MarkObjects: 0.228734 ms  DeleteObjects: 0.452336 ms)
 
