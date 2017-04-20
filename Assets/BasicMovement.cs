@@ -60,7 +60,7 @@ public class BasicMovement : MonoBehaviour {
     private void Move()
     {
         // Adjust the position of the tank based on the player's input
-        if (Speed <= maxSpeed && MovementInputValue !=0)
+        if (Speed <= maxSpeed && MovementInputValue == -1)
         {
             
             if (Speed < (maxSpeed/3))
@@ -99,11 +99,25 @@ public class BasicMovement : MonoBehaviour {
         }
 
       
-        if (MovementInputValue == 0)
+        if (MovementInputValue == 0 && Speed > initialSpeed)
         {
-            Vector3 movement = transform.forward * 1 * Speed * Time.deltaTime;
+            tank.drag = 0.5f ;
+            Vector3 movement = transform.forward * -1 * Speed * Time.deltaTime;
             tank.MovePosition(tank.position + movement);
+            Speed -= 0.1f;
+        }
 
+        if(MovementInputValue == 0  && Speed <= initialSpeed)
+        {
+            Speed = initialSpeed -1;
+            tank.drag = 0.5f;
+        }
+
+        if(MovementInputValue == 1)
+        {
+            Vector3 movement = transform.forward * -MovementInputValue * Speed * Time.deltaTime;
+            tank.MovePosition(tank.position + movement);
+            Speed -= 0.05f;
         }
 
     }
