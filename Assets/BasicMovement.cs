@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour {
 
-    public int PlayerNum = 1;
-    public float Speed = 12f;
-    public float turnSpeed = 180f;
-    public float maxSpeed = 33f;
+    public int PlayerNum;
+    public float initialSpeed;
+    public float Speed;
+    public float turnSpeed;
+    public float maxSpeed;
 
+    private int prevInputValue;
     private string MovementAxisName;
     private string TurnAxisName;
     private Rigidbody tank;
@@ -59,21 +61,28 @@ public class BasicMovement : MonoBehaviour {
     private void Move()
     {
         // Adjust the position of the tank based on the player's input
-        if (Speed <= maxSpeed)
+        if (Speed <= maxSpeed && MovementInputValue != 0)
         {
             Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
             tank.MovePosition(tank.position + movement);
             Speed += 0.1f;
+            prevInputValue = 1;
         }
-        if (MovementInputValue == 0)
+
+        if (MovementInputValue == 0 && Speed >= 0)
         {
-            Speed = 12f;
+            Speed -= 0.1f;
+            Vector3 movement = transform.forward * prevInputValue * Speed * Time.deltaTime;
+            tank.MovePosition(tank.position + movement);
         }
+
         if(Speed >= maxSpeed)
         {
             Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
             tank.MovePosition(tank.position + movement);
+            prevInputValue = -1;
         }
+
     }
 
     private void Turn()
