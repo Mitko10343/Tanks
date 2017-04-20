@@ -10,7 +10,6 @@ public class BasicMovement : MonoBehaviour {
     public float turnSpeed;
     public float maxSpeed;
 
-    private int prevInputValue;
     private string MovementAxisName;
     private string TurnAxisName;
     private Rigidbody tank;
@@ -61,26 +60,50 @@ public class BasicMovement : MonoBehaviour {
     private void Move()
     {
         // Adjust the position of the tank based on the player's input
-        if (Speed <= maxSpeed && MovementInputValue != 0)
+        if (Speed <= maxSpeed && MovementInputValue !=0)
         {
-            Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
-            tank.MovePosition(tank.position + movement);
-            Speed += 0.1f;
-            prevInputValue = 1;
+            
+            if (Speed < (maxSpeed/3))
+            {
+                Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
+                tank.MovePosition(tank.position + movement);
+                Speed += 0.1f;
+                tank.drag = 3;
+                turnSpeed = 80;
+            }
+            else if(Speed > (maxSpeed / 3) && Speed <(maxSpeed/1.5))
+            {
+                Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
+                tank.MovePosition(tank.position + movement);
+                Speed += 0.05f;
+                tank.drag = 3.5f;
+                turnSpeed = 65;
+            }
+            else if(Speed > (maxSpeed/1.5) && Speed <maxSpeed)
+            {
+                Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
+                tank.MovePosition(tank.position + movement);
+                Speed += 0.02f;
+                tank.drag = 4;
+                turnSpeed = 55;
+            }
+            
         }
 
-        if (MovementInputValue == 0 && Speed >= 0)
+        if (Speed >= maxSpeed && MovementInputValue != 0)
         {
-            Speed -= 0.1f;
-            Vector3 movement = transform.forward * prevInputValue * Speed * Time.deltaTime;
-            tank.MovePosition(tank.position + movement);
-        }
-
-        if(Speed >= maxSpeed)
-        {
+            tank.drag = 5;
             Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
             tank.MovePosition(tank.position + movement);
-            prevInputValue = -1;
+            turnSpeed = 45;
+        }
+
+      
+        if (MovementInputValue == 0)
+        {
+            Vector3 movement = transform.forward * 1 * Speed * Time.deltaTime;
+            tank.MovePosition(tank.position + movement);
+
         }
 
     }
