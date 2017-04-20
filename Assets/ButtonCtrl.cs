@@ -14,4 +14,19 @@ public class ButtonCtrl : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    public void RaceMode(string GameMode)
+    {
+        SceneManager.LoadScene(GameMode);
+    }
+
+    public void PvPMode(string GameMode)
+    {
+        SceneManager.LoadScene(GameMode);
+    }
+
+    public void BackBtn(string PrevGameLevel)
+    {
+        SceneManager.LoadScene(PrevGameLevel);
+    }
 }
