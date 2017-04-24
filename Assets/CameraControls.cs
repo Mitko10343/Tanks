@@ -65,5 +65,43 @@ public class CameraControls : MonoBehaviour {
         m_DesiredPosition = averagePos;
     }
 
+    private void Zoom()
+    {
+        float requiredSize = FindRequireSize();
+        m_Camera.orthographicSize= Mathf.SmoothDamp(m_Camera.orthographicSize, requiredSize, ref m_ZoomSpeed, m_DampTime);
+    }
+
+    private float FindRequiredSize()
+    {
+        Vector3 desiredLocalPos = transform.InverseTransformPoint(m_DesiredPosition);
+        float size = 0.f;
+
+        for(int i =0; i<m_Targets.Length;i++)
+        {
+            if(!m_Targets[i].gameObject.activeSelf)
+            {
+                continue;
+            }
+
+            Vector3 targetLocalPos = transform.InverseTransformPoint(m_Targets[i].position);
+            Vector3 desiredPosToTarget = targetLocalPos - desiredLocalPos;
+
+            size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.y));
+            size = Mathf.Max(size, Mathf.Abs(desiredPosToTarget.x) / m_Camera.aspect);
+        }
+
+        size += m_ScreenEdgeBuffer;
+        size = Mathf.Max(size, m_MinSize);
+        return size;
+
+    }
+
+    public void SetStarPositionAndSize()
+    {
+        FindAveragePosition();
+
+        transform.position = m_DesiredPosition;
+        m_Camera.orthographicSize = FindRequiredSize();
+    }
 
 }
