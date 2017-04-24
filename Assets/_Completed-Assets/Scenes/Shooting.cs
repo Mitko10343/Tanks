@@ -35,10 +35,5 @@ public class Shooting : MonoBehaviour {
             //delete the bullet after a while
             Destroy(Temp_BulletShooter, 10.0f);
         }
-
-
-
-
-
     }
 }
