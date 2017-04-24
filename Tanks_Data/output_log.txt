@@ -19,25 +19,45 @@ Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networ
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  1.328 seconds
+- Completed reload, in  0.136 seconds
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.994093 ms
+UnloadTime: 2.674797 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1b84 -> priority: 1 
+  Thread -> id: 1c1c -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 8.394985 ms
+UnloadTime: 7.230420 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 453.
-Total: 0.330271 ms (FindLiveObjects: 0.044720 ms CreateObjectMapping: 0.023093 ms MarkObjects: 0.253660 ms  DeleteObjects: 0.007697 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 455.
+Total: 0.240097 ms (FindLiveObjects: 0.027492 ms CreateObjectMapping: 0.016861 ms MarkObjects: 0.187312 ms  DeleteObjects: 0.007331 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.393320 ms
+UnloadTime: 0.381223 ms
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 650.
-Total: 0.632318 ms (FindLiveObjects: 0.038122 ms CreateObjectMapping: 0.024559 ms MarkObjects: 0.197209 ms  DeleteObjects: 0.372059 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 1021.
+Total: 0.796171 ms (FindLiveObjects: 0.085408 ms CreateObjectMapping: 0.032257 ms MarkObjects: 0.271621 ms  DeleteObjects: 0.406149 ms)
+
+Player 1 has won the race
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player 1 has won the race
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player 1 has won the race
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player 1 has won the race
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player 1 has won the race
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 

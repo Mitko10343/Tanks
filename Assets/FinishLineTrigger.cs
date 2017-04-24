@@ -18,9 +18,13 @@ public class FinishLineTrigger : MonoBehaviour {
         {
             Debug.Log("Player 1 has won the race");
         }
-        else
+        else if(player2)
         {
             Debug.Log("Player2 has won the race");
+        }
+        else
+        {
+            Debug.Log("The Bot Has won you noobs");
         }
        
     }
