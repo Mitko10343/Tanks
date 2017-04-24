@@ -19,25 +19,25 @@ Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networ
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.048 seconds
+- Completed reload, in  1.328 seconds
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.531859 ms
+UnloadTime: 1.994093 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 12b8 -> priority: 1 
+  Thread -> id: 1b84 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 9.671718 ms
+UnloadTime: 8.394985 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 452.
-Total: 0.377558 ms (FindLiveObjects: 0.041421 ms CreateObjectMapping: 0.037389 ms MarkObjects: 0.280419 ms  DeleteObjects: 0.010630 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 453.
+Total: 0.330271 ms (FindLiveObjects: 0.044720 ms CreateObjectMapping: 0.023093 ms MarkObjects: 0.253660 ms  DeleteObjects: 0.007697 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.685469 ms
+UnloadTime: 0.393320 ms
 
-Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 607.
-Total: 0.789939 ms (FindLiveObjects: 0.056816 ms CreateObjectMapping: 0.035923 ms MarkObjects: 0.252560 ms  DeleteObjects: 0.443172 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 650.
+Total: 0.632318 ms (FindLiveObjects: 0.038122 ms CreateObjectMapping: 0.024559 ms MarkObjects: 0.197209 ms  DeleteObjects: 0.372059 ms)
 

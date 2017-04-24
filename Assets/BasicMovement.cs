@@ -89,8 +89,7 @@ public class BasicMovement : MonoBehaviour {
             }
             
         }
-
-        if (Speed >= maxSpeed && MovementInputValue != 0)
+        else if (Speed >= maxSpeed && MovementInputValue != 0)
         {
             tank.drag = 5;
             Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
@@ -98,7 +97,8 @@ public class BasicMovement : MonoBehaviour {
             turnSpeed = 45;
         }
 
-      
+
+        
         if (MovementInputValue == 0 && Speed > initialSpeed)
         {
             tank.drag = 0.5f ;
@@ -106,12 +106,12 @@ public class BasicMovement : MonoBehaviour {
             tank.MovePosition(tank.position + movement);
             Speed -= 0.1f;
         }
-
-        if(MovementInputValue == 0  && Speed <= initialSpeed)
+        else if(MovementInputValue == 0  && Speed <= initialSpeed)
         {
             Speed = initialSpeed -1;
             tank.drag = 0.5f;
         }
+
 
         if(MovementInputValue == 1)
         {
