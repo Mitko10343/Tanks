@@ -16,45 +16,58 @@ public class BasicAi : MonoBehaviour {
     public float TurnSpeed = 65;
 
     //currentWaypoint
-    private int current;
+    private float currentAngleAI;
+    private float AngleToTurn;
+    public int current=0;
     private bool go = true; //boolean variable to check if the Ai should be moving
     private float Speed = 0;
     private float currentTurnAngle = 0;
 
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
         float dist = Vector3.Distance(gameObject.transform.position, waypoints[current].transform.position); //distance between waypoint and player
-
+ 
         if(go)
         {
-            if(dist < minDistance)
+            if(dist > minDistance)
             {
                 Move();
-            }
-            if (current + 1 != waypoints.Length)
-            {
-                current++;
+                
             }
             else
             {
-                Debug.Log("Ai has reached the finish line");
+                if (current + 1 != waypoints.Length)
+                {
+                    current++;
+                }
+                else
+                {
+                    Debug.Log("Ai has reached the finish line");
+                    go = false;
+                }
             }
+           
         }
 	}
 
     public void Move()
     {
-        while (Speed < maxSpeed)
+
+
+
+        if (Speed < maxSpeed)
         {
             Speed += Acceleration;
             gameObject.transform.LookAt(waypoints[current].transform.position);
             gameObject.transform.position += gameObject.transform.forward * Speed * Time.deltaTime;
         }
+        if (Speed >= maxSpeed)
+        {
+            gameObject.transform.LookAt(waypoints[current].transform.position);
+            gameObject.transform.position += gameObject.transform.forward * Speed * Time.deltaTime;
+        }
+        
     }
 }
