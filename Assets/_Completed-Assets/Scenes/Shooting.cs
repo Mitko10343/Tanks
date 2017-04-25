@@ -16,6 +16,7 @@ public class Shooting : MonoBehaviour {
     public string ShootingKey;
 
     public float health;
+    public Transform canvas;
 
 	// Update is called once per frame
 	void Update () {
@@ -47,10 +48,18 @@ public class Shooting : MonoBehaviour {
             if(health <=0)
             {
                 Debug.Log("Player health critical");
+                DisplayFinishScreen();
+                Time.timeScale = 0;
             }
         }
 
     }
+
+    private void DisplayFinishScreen()
+    {
+        canvas.gameObject.SetActive(true);
+    }
+
 
 
 }

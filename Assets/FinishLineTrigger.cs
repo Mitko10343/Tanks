@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class FinishLineTrigger : MonoBehaviour {
 
-    //public GameObject player1, player2;
     public Collider finishLine;
     public Transform canvas;
     

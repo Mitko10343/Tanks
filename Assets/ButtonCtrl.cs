@@ -7,6 +7,7 @@ public class ButtonCtrl : MonoBehaviour {
     
     public void NewGameBtn(string newGameLevel)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(newGameLevel);
     }
 
@@ -22,6 +23,7 @@ public class ButtonCtrl : MonoBehaviour {
 
     public void PvPMode(string GameMode)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(GameMode);
     }
 
@@ -31,6 +33,7 @@ public class ButtonCtrl : MonoBehaviour {
     }
     public void PlayAgain()
     {
+        Time.timeScale = 1;
         Application.LoadLevel(Application.loadedLevel);
     }
 
