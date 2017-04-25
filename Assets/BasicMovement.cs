@@ -10,11 +10,14 @@ public class BasicMovement : MonoBehaviour {
     public float turnSpeed;
     public float maxSpeed;
 
+    public AudioClip otherclip;
+
     private string MovementAxisName;
     private string TurnAxisName;
     private Rigidbody tank;
     private float MovementInputValue;
     private float TurnInputValue;
+
 
     public Vector3 CenterOfMass;
  
@@ -62,7 +65,10 @@ public class BasicMovement : MonoBehaviour {
         // Adjust the position of the tank based on the player's input
         if (Speed <= maxSpeed && MovementInputValue == -1)
         {
-            
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.pitch = Random.Range(0.8f, 1.5f);
+            audioSource.Play();
+
             if (Speed < (maxSpeed/3))
             {
                 Vector3 movement = transform.forward * MovementInputValue * Speed * Time.deltaTime;
@@ -108,6 +114,9 @@ public class BasicMovement : MonoBehaviour {
         }
         else if(MovementInputValue == 0  && Speed <= initialSpeed)
         {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.pitch = Random.Range(0.8f, 1.5f);
+            audioSource.Play();
             Speed = initialSpeed -1;
             tank.drag = 0.5f;
         }
@@ -115,6 +124,9 @@ public class BasicMovement : MonoBehaviour {
 
         if(MovementInputValue == 1)
         {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.pitch = Random.Range(0.8f, 1.5f);
+            audioSource.Play();
             Vector3 movement = transform.forward * -MovementInputValue * Speed * Time.deltaTime;
             tank.MovePosition(tank.position + movement);
             Speed -= 0.05f;
