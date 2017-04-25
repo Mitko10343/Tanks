@@ -15,6 +15,7 @@ public class Shooting : MonoBehaviour {
 
     public string ShootingKey;
 
+    public AudioClip shoot;
     public float health;
     public Transform canvas;
 
@@ -23,6 +24,9 @@ public class Shooting : MonoBehaviour {
 
         if(Input.GetKeyDown(ShootingKey))
         {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.clip = shoot;
+            audio.Play();
             //Create A bullet
             GameObject Temp_BulletShooter;
             Temp_BulletShooter = Instantiate(Bullet, BulletShooter.transform.position, BulletShooter.transform.rotation) as GameObject;

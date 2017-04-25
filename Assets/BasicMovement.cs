@@ -62,12 +62,11 @@ public class BasicMovement : MonoBehaviour {
 
     private void Move()
     {
-        // Adjust the position of the tank based on the player's input
+
+            // Adjust the position of the tank based on the player's input
         if (Speed <= maxSpeed && MovementInputValue == -1)
         {
-            AudioSource audioSource = GetComponent<AudioSource>();
-            audioSource.pitch = Random.Range(0.8f, 1.5f);
-            audioSource.Play();
+            
 
             if (Speed < (maxSpeed/3))
             {
@@ -114,9 +113,7 @@ public class BasicMovement : MonoBehaviour {
         }
         else if(MovementInputValue == 0  && Speed <= initialSpeed)
         {
-            AudioSource audioSource = GetComponent<AudioSource>();
-            audioSource.pitch = Random.Range(0.8f, 1.5f);
-            audioSource.Play();
+            
             Speed = initialSpeed -1;
             tank.drag = 0.5f;
         }
