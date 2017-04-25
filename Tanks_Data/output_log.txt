@@ -19,27 +19,27 @@ Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networ
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.151 seconds
+- Completed reload, in  0.063 seconds
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.509499 ms
+UnloadTime: 1.308257 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 2c9c -> priority: 1 
+  Thread -> id: 2a04 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.449624 ms
+UnloadTime: 7.250215 ms
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 456.
-Total: 0.304245 ms (FindLiveObjects: 0.072579 ms CreateObjectMapping: 0.016495 ms MarkObjects: 0.201242 ms  DeleteObjects: 0.006964 ms)
+Total: 0.269055 ms (FindLiveObjects: 0.034823 ms CreateObjectMapping: 0.022360 ms MarkObjects: 0.189145 ms  DeleteObjects: 0.006964 ms)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.451970 ms
+UnloadTime: 0.407616 ms
 
 Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 869.
-Total: 0.647347 ms (FindLiveObjects: 0.055350 ms CreateObjectMapping: 0.024193 ms MarkObjects: 0.220303 ms  DeleteObjects: 0.337236 ms)
+Total: 0.690601 ms (FindLiveObjects: 0.074778 ms CreateObjectMapping: 0.038488 ms MarkObjects: 0.240464 ms  DeleteObjects: 0.336136 ms)
 
 hit
  
@@ -148,6 +148,28 @@ hit
 hit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Player health critical
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.549066 ms
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 857.
+Total: 0.755116 ms (FindLiveObjects: 0.047652 ms CreateObjectMapping: 0.035189 ms MarkObjects: 0.225435 ms  DeleteObjects: 0.445005 ms)
 
 hit
  
@@ -274,42 +296,62 @@ Player health critical
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.570694 ms
+UnloadTime: 2.349291 ms
 
 Unloading 60 unused Assets to reduce memory usage. Loaded Objects now: 447.
-Total: 1.630097 ms (FindLiveObjects: 0.052418 ms CreateObjectMapping: 0.024559 ms MarkObjects: 0.168251 ms  DeleteObjects: 1.383035 ms)
+Total: 1.549087 ms (FindLiveObjects: 0.049852 ms CreateObjectMapping: 0.024193 ms MarkObjects: 0.174116 ms  DeleteObjects: 1.299826 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.141838 ms
+UnloadTime: 1.130108 ms
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 463.
-Total: 0.251461 ms (FindLiveObjects: 0.039222 ms CreateObjectMapping: 0.016495 ms MarkObjects: 0.188045 ms  DeleteObjects: 0.006598 ms)
+Total: 0.250727 ms (FindLiveObjects: 0.037022 ms CreateObjectMapping: 0.015395 ms MarkObjects: 0.190245 ms  DeleteObjects: 0.006964 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.385989 ms
+UnloadTime: 0.372792 ms
 
 Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1136.
-Total: 0.890377 ms (FindLiveObjects: 0.065981 ms CreateObjectMapping: 0.028591 ms MarkObjects: 0.339802 ms  DeleteObjects: 0.445371 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseScript.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseScript.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Total: 1.042866 ms (FindLiveObjects: 0.106302 ms CreateObjectMapping: 0.039955 ms MarkObjects: 0.363262 ms  DeleteObjects: 0.532613 ms)
 
 Player 1 has won the race
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 20.322155 ms
+UnloadTime: 18.193533 ms
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1122.
-Total: 1.680316 ms (FindLiveObjects: 0.094206 ms CreateObjectMapping: 0.039222 ms MarkObjects: 0.440606 ms  DeleteObjects: 1.104815 ms)
+Total: 1.193523 ms (FindLiveObjects: 0.095672 ms CreateObjectMapping: 0.038855 ms MarkObjects: 0.361062 ms  DeleteObjects: 0.697199 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 NullReferenceException: Object reference not set to an instance of an object
   at PauseScript.Update () [0x00000] in <filename unknown>:0 
@@ -327,8 +369,8 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename:  Line: -1)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 12.060597 ms
+UnloadTime: 15.633837 ms
 
 Unloading 131 unused Assets to reduce memory usage. Loaded Objects now: 447.
-Total: 3.762018 ms (FindLiveObjects: 0.033723 ms CreateObjectMapping: 0.032257 ms MarkObjects: 0.184380 ms  DeleteObjects: 3.510923 ms)
+Total: 3.514955 ms (FindLiveObjects: 0.037022 ms CreateObjectMapping: 0.023826 ms MarkObjects: 0.177782 ms  DeleteObjects: 3.276324 ms)
 
