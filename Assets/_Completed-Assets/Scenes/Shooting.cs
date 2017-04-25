@@ -15,6 +15,7 @@ public class Shooting : MonoBehaviour {
 
     public string ShootingKey;
 
+    public float health;
 
 	// Update is called once per frame
 	void Update () {
@@ -33,7 +34,23 @@ public class Shooting : MonoBehaviour {
             temp_bullet.AddForce(transform.forward * -BulletForwardForce);
 
             //delete the bullet after a while
-            Destroy(Temp_BulletShooter, 10.0f);
+            Destroy(Temp_BulletShooter, 3.0f);
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "bullet")
+        {
+            Debug.Log("hit");
+            health -= 10;
+            if(health <=0)
+            {
+                Debug.Log("Player health critical");
+            }
+        }
+
+    }
+
+
 }
