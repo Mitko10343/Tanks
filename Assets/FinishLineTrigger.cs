@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class FinishLineTrigger : MonoBehaviour {
 
-    public GameObject player1, player2;
+    //public GameObject player1, player2;
+    public Collider finishLine;
     public Transform canvas;
     
     void Start()
@@ -15,26 +16,26 @@ public class FinishLineTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider end)
     {
-        if(player1 == end.gameObject)
+        if(end.gameObject.name == "Player1")
         {
             Debug.Log("Player 1 has won the race");
             DisplayFinishScreen();
             Time.timeScale = 0;
           
         }
-        else if(player2 == end.gameObject)
+        else if(end.gameObject.name == "Player2")
         {
             Debug.Log("Player2 has won the race");
             DisplayFinishScreen();
             Time.timeScale = 0;
         }
-        else
+        /*else 
         {
             Debug.Log("The Bot Has won you noobs");
             DisplayFinishScreen();
             Time.timeScale = 0;
         }
-       
+       */
     }
 
     private void DisplayFinishScreen()
