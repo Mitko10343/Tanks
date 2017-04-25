@@ -29,4 +29,13 @@ public class ButtonCtrl : MonoBehaviour {
     {
         SceneManager.LoadScene(PrevGameLevel);
     }
+    public void PlayAgain()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void Exit(string level)
+    {
+        Application.LoadLevel(level);
+    }
 }
