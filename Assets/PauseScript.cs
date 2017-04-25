@@ -1,37 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour {
 
-    public GameObject[] guiObjects;
+    public Transform canvas;
 
-    public bool pause = false;
-
-    public void Start()
+    public void Update()
     {
-        Time.timeScale = 1;
-        guiObjects = GameObject.FindGameObjectsWithTag("Paused");
-    }
-    public void update()
-    {
-        if (Input.GetKeyDown("p") && pause == false)
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Time.timeScale == 0)
+            if(canvas.gameObject.activeInHierarchy == false)
             {
-                foreach(GameObject g in guiObjects)
-                {
-                    g.SetActive(true);
-                }
+                canvas.gameObject.SetActive(true);
+                Time.timeScale = 0;
             }
-            else if(Time.timeScale == 1)
+            else
             {
-                foreach (GameObject g in guiObjects)
-                {
-                    g.SetActive(false);
-                }
+                canvas.gameObject.SetActive(false);
+                Time.timeScale = 1;
+            }
+        }
+    }
 
-            }
+
+    public void Reload()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void LoadLevel(string Level)
+    {
+        Application.LoadLevel(Level);
+    }
+
+    public void Unpause()
+    {
+        if(Time.timeScale == 0)
+        {
+            canvas.gameObject.SetActive(false);
+            Time.timeScale = 1;
+        }
+        else if(Time.timeScale == 1)
+        {
+            canvas.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
