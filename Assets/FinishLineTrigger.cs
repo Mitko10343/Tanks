@@ -8,6 +8,7 @@ public class FinishLineTrigger : MonoBehaviour {
     public Collider finishLine;
     public Transform canvas;
     public Transform canvas2;
+    public Transform canvas3;
     
     void Start()
     {
@@ -29,13 +30,13 @@ public class FinishLineTrigger : MonoBehaviour {
             DisplayFinishScreen2();
             Time.timeScale = 0;
         }
-        /*else 
+        else if (end.gameObject.name == "Player3")
         {
             Debug.Log("The Bot Has won you noobs");
-            DisplayFinishScreen();
+            DisplayFinishScreen3();
             Time.timeScale = 0;
         }
-       */
+       
     }
 
     private void DisplayFinishScreen()
@@ -47,6 +48,11 @@ public class FinishLineTrigger : MonoBehaviour {
     private void DisplayFinishScreen2()
     {
         canvas2.gameObject.SetActive(true);
+    }
+
+    private void DisplayFinishScreen3()
+    {
+        canvas3.gameObject.SetActive(true);
     }
 
 }

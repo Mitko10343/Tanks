@@ -19,48 +19,47 @@ Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networ
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading E:\Unity\Projects\Tanks\Tanks_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.159 seconds
+- Completed reload, in  0.053 seconds
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Unity\Projects\Tanks\Tanks_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.425190 ms
+UnloadTime: 10.083734 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 301c -> priority: 1 
+  Thread -> id: 1e0 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.521836 ms
+UnloadTime: 10.146415 ms
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 432.
-Total: 0.251094 ms (FindLiveObjects: 0.024559 ms CreateObjectMapping: 0.015395 ms MarkObjects: 0.198309 ms  DeleteObjects: 0.007697 ms)
+Total: 1.086121 ms (FindLiveObjects: 0.063781 ms CreateObjectMapping: 0.024559 ms MarkObjects: 0.952326 ms  DeleteObjects: 0.041054 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.529681 ms
+UnloadTime: 1.236044 ms
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1110.
-Total: 0.853354 ms (FindLiveObjects: 0.095672 ms CreateObjectMapping: 0.032623 ms MarkObjects: 0.318541 ms  DeleteObjects: 0.405783 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1186.
+Total: 4.770794 ms (FindLiveObjects: 0.199409 ms CreateObjectMapping: 0.118399 ms MarkObjects: 2.208898 ms  DeleteObjects: 2.241522 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at PauseScript.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Player2 has won the race
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 11.766982 ms
+UnloadTime: 39.301231 ms
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1098.
-Total: 1.208552 ms (FindLiveObjects: 0.071112 ms CreateObjectMapping: 0.035923 ms MarkObjects: 0.355197 ms  DeleteObjects: 0.745585 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseScript.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseScript.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1173.
+Total: 1.037001 ms (FindLiveObjects: 0.092739 ms CreateObjectMapping: 0.026025 ms MarkObjects: 0.364728 ms  DeleteObjects: 0.552041 ms)
 
 NullReferenceException: Object reference not set to an instance of an object
   at PauseScript.Update () [0x00000] in <filename unknown>:0 
@@ -68,26 +67,54 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename:  Line: -1)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 14.857094 ms
+UnloadTime: 21.448965 ms
 
-Unloading 131 unused Assets to reduce memory usage. Loaded Objects now: 423.
-Total: 4.237081 ms (FindLiveObjects: 0.043987 ms CreateObjectMapping: 0.032990 ms MarkObjects: 0.174849 ms  DeleteObjects: 3.984520 ms)
+Unloading 131 unused Assets to reduce memory usage. Loaded Objects now: 422.
+Total: 5.275916 ms (FindLiveObjects: 0.179981 ms CreateObjectMapping: 0.104836 ms MarkObjects: 0.961490 ms  DeleteObjects: 4.025942 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.337582 ms
+UnloadTime: 3.286588 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 439.
-Total: 0.298380 ms (FindLiveObjects: 0.036656 ms CreateObjectMapping: 0.021260 ms MarkObjects: 0.222869 ms  DeleteObjects: 0.007331 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 438.
+Total: 1.483839 ms (FindLiveObjects: 0.187312 ms CreateObjectMapping: 0.069280 ms MarkObjects: 1.172262 ms  DeleteObjects: 0.049485 ms)
 
 The referenced script on this Behaviour (Game Object 'Player1') is missing!
  
 (Filename:  Line: 1754)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.388921 ms
+UnloadTime: 0.412014 ms
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 850.
-Total: 0.615456 ms (FindLiveObjects: 0.075511 ms CreateObjectMapping: 0.035923 ms MarkObjects: 0.220303 ms  DeleteObjects: 0.282618 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 888.
+Total: 2.454127 ms (FindLiveObjects: 0.146257 ms CreateObjectMapping: 0.050218 ms MarkObjects: 0.697932 ms  DeleteObjects: 1.557885 ms)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+hit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 hit
  
@@ -265,33 +292,29 @@ Player health critical
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-hit
+The referenced script on this Behaviour (Game Object 'Player1') is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: 1754)
 
-Player health critical
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.099987 ms
 
-hit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 903.
+Total: 1.220282 ms (FindLiveObjects: 0.083209 ms CreateObjectMapping: 0.042154 ms MarkObjects: 0.510986 ms  DeleteObjects: 0.583198 ms)
 
-Player health critical
+The referenced script on this Behaviour (Game Object 'Player1') is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: 1754)
 
-hit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.925546 ms
 
-Player health critical
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 903.
+Total: 1.516463 ms (FindLiveObjects: 0.307178 ms CreateObjectMapping: 0.087608 ms MarkObjects: 0.675938 ms  DeleteObjects: 0.438773 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.236756 ms
+UnloadTime: 5.343363 ms
 
-Unloading 61 unused Assets to reduce memory usage. Loaded Objects now: 423.
-Total: 4.413030 ms (FindLiveObjects: 0.039222 ms CreateObjectMapping: 0.016495 ms MarkObjects: 0.336136 ms  DeleteObjects: 4.020077 ms)
+Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 451.
+Total: 3.514589 ms (FindLiveObjects: 0.057550 ms CreateObjectMapping: 0.024926 ms MarkObjects: 0.352998 ms  DeleteObjects: 3.078381 ms)
 
