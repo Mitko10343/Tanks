@@ -14,6 +14,8 @@ public class Shooting : MonoBehaviour {
     public float BulletForwardForce;
 
     public string ShootingKey;
+    public int healthX;
+    public int healthY;
 
     public AudioClip shoot;
     public float health;
@@ -62,6 +64,12 @@ public class Shooting : MonoBehaviour {
     private void DisplayFinishScreen()
     {
         canvas.gameObject.SetActive(true);
+
+    }
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(healthX, healthY, 100, 20), "HEALTH:"+health.ToString());
     }
 
 

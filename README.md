@@ -9,8 +9,8 @@
 
 # Concept:
 
-For our our OOP assignment we had to to creat something that would implement all of our knowledge we
-had gained so far from our course.
+For our our OOP assignment we had to create something that would implement all of our knowledge we
+have gained so far from our course.
 We began  by coming up with some Ideas which we could use for our project. Some of the ideas we came in were:
 -A multiplayer racing game.
 -Tank arena game 
@@ -18,7 +18,7 @@ We began  by coming up with some Ideas which we could use for our project. Some 
 -A phone app
 -Game with games
 
-Most of our ideas  were either a race or like a pvp game and since we really wanted to use the theme of war we 
+Most of our ideas  were either a race or a pvp game and since we really wanted to use the theme of war we 
 decided to make a tank game with two game modes. One of the game modes would be a race while the other would 
 have a PVP aspect.
 
@@ -35,17 +35,17 @@ which add a very nice animation to the tress.
 The Movement: 
 
 The Movement of the tanks is probably the feature we are most proud of. At first we thought its
-going to be extremely easy ,but the more indepth we went into writing the script for the movement
-the harder it got. We face a lot of difficulties with trying to ad real life tank physics to the 
-tanks ,such as making the turning speed of the tank slower if the tank was moving at a higher speed
+going to be extremely easy, but the more indepth we went into writing the script for the movement
+the harder it got. We face a lot of difficulties with trying to add real life tank physics to the 
+tanks, such as making the turning speed of the tank slower if the tank was moving at a higher speed
 or trying to get the perfect center of mass so the tank wouldn't flip over easily.
 
 Menus: 
 
-The menu is a feature wich wasnt that hard to make as it was time consuming. We tried to make it as
+The menu is a feature which wasnt that hard to make as it was time consuming. We tried to make it as
 professional as possible so it would make a good impression to the user from the moment he started up 
 the game. We also added a pause menu to the game which would allow the user to restart the game when ever 
-he felt like or even go  back to the main menu.
+he felt like or even go back to the main menu.
 		
 Split Screens: 
 
@@ -57,17 +57,17 @@ AI Bots:
  
 As well as the multiplayer aspect of the game we felt if we added an AI to the game it would add to the 
 enjoyment even more so we added in an extra tank in the Racing mode of the game and with the aid of a 
-script the tank was soon moving on its  own.
+script the tank was soon moving on its own. The AI tank use waypoints to tranverse the map.
 
 Minimap:
 
 When testing our game out with some friends, we got some very important feed back. Most of the people that
-tried out the race mode couldnt find the path they were meant to take so we came up with the idea of adding
+tried out the race mode couldn't find the path they were meant to take so we came up with the idea of adding
 a minimap to the game.
 
 Pvp Mode:
 
-The Pvp mode is the second game mode of our project. It is made up of an arena and it is also a multiplayer mode.
+The Pvp mode is the second game mode of our project. It is made up of an arena and a multiplayer mode.
 Unlike the race mode how ever there is no AIs in it.
 The Pvp Mode consists of the two players trying to kill either one of each other. One of the differences in the
 PVP mode over the race mode is that the players can shoot at each other and each player has their own health bar.

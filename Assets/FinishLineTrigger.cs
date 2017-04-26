@@ -7,6 +7,7 @@ public class FinishLineTrigger : MonoBehaviour {
 
     public Collider finishLine;
     public Transform canvas;
+    public Transform canvas2;
     
     void Start()
     {
@@ -25,7 +26,7 @@ public class FinishLineTrigger : MonoBehaviour {
         else if(end.gameObject.name == "Player2")
         {
             Debug.Log("Player2 has won the race");
-            DisplayFinishScreen();
+            DisplayFinishScreen2();
             Time.timeScale = 0;
         }
         /*else 
@@ -40,6 +41,12 @@ public class FinishLineTrigger : MonoBehaviour {
     private void DisplayFinishScreen()
     {
         canvas.gameObject.SetActive(true);
+    }
+
+
+    private void DisplayFinishScreen2()
+    {
+        canvas2.gameObject.SetActive(true);
     }
 
 }
