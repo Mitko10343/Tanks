@@ -1,6 +1,12 @@
 # Tanks
 
 
+| Name            | Student Number |
+| --------------- |----------------|
+| Dimiter Dinkov  | C15334276      |
+| Thomas Kearney  | C15329301	   |
+
+
 # Concept:
 
 For our our OOP assignment we had to to creat something that would implement all of our knowledge we
